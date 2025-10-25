@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +16,8 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --radius: 8px;
             --wallpaper: none;
+            --text-color: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.92);
         }
 
         * {
@@ -28,13 +29,13 @@
 
         body {
             background-color: #f5f7fa;
-            color: var(--dark);
+            color: var(--text-color);
             font-size: 14px;
             background-image: var(--wallpaper);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            transition: background-image 0.5s ease;
+            transition: background-image 0.5s ease, color 0.3s ease;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,7 +47,7 @@
         .login-container {
             width: 100%;
             max-width: 400px;
-            background: rgba(255, 255, 255, 0.92);
+            background: var(--card-bg);
             backdrop-filter: blur(10px);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
@@ -55,15 +56,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .login-header {
@@ -95,7 +89,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: var(--dark);
+            color: var(--text-color);
         }
 
         .form-control {
@@ -105,6 +99,8 @@
             border-radius: var(--radius);
             font-size: 14px;
             transition: border-color 0.3s, box-shadow 0.3s;
+            background: var(--card-bg);
+            color: var(--text-color);
         }
 
         .form-control:focus {
@@ -128,10 +124,11 @@
             border-radius: var(--radius);
             cursor: pointer;
             transition: all 0.3s;
+            background: var(--card-bg);
         }
 
         .user-option:hover {
-            background-color: #f9f9f9;
+            background-color: rgba(0, 0, 0, 0.05);
         }
 
         .user-option.selected {
@@ -150,6 +147,7 @@
         .user-option .user-name {
             font-weight: 500;
             margin-bottom: 2px;
+            color: var(--text-color);
         }
 
         .user-option .user-role {
@@ -266,7 +264,7 @@
         }
 
         .app-nav {
-            background-color: white;
+            background-color: var(--card-bg);
             box-shadow: var(--shadow);
             margin-bottom: 15px;
             position: sticky;
@@ -287,6 +285,7 @@
             border-bottom: 3px solid transparent;
             transition: all 0.3s;
             font-weight: 500;
+            color: var(--text-color);
         }
 
         .nav-tab.active {
@@ -312,8 +311,9 @@
             border: 1px solid #ddd;
             border-radius: var(--radius);
             font-size: 16px;
-            background-color: white;
+            background-color: var(--card-bg);
             box-shadow: var(--shadow);
+            color: var(--text-color);
         }
 
         .quick-access {
@@ -326,7 +326,7 @@
         }
 
         .quick-access-item {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 12px;
             box-shadow: var(--shadow);
@@ -350,7 +350,7 @@
         }
 
         .product-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 12px;
             box-shadow: var(--shadow);
@@ -379,6 +379,7 @@
             font-weight: 500;
             margin-bottom: 5px;
             font-size: 14px;
+            color: var(--text-color);
         }
 
         .product-price {
@@ -394,7 +395,7 @@
         }
 
         .cart-container {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
@@ -438,6 +439,7 @@
             margin: 15px 0;
             padding-top: 15px;
             border-top: 2px solid #eee;
+            color: var(--text-color);
         }
 
         .payment-section {
@@ -455,6 +457,8 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: var(--radius);
+            background: var(--card-bg);
+            color: var(--text-color);
         }
 
         .change-display {
@@ -464,6 +468,7 @@
             margin-bottom: 15px;
             text-align: center;
             font-weight: 600;
+            color: var(--text-color);
         }
 
         .payment-actions {
@@ -485,7 +490,7 @@
         }
 
         .manager-sidebar {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
@@ -495,7 +500,7 @@
         }
 
         .manager-content {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
@@ -511,6 +516,7 @@
             border-radius: var(--radius);
             margin-bottom: 5px;
             transition: all 0.3s;
+            color: var(--text-color);
         }
 
         .manager-menu-item:hover {
@@ -530,13 +536,13 @@
         }
 
         .stat-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
             text-align: center;
             border: 1px solid #eee;
-            height: 120px;
+            height: 120px; /* Consistent height */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -546,6 +552,7 @@
             font-size: 22px;
             font-weight: 600;
             margin: 10px 0;
+            color: var(--text-color);
         }
 
         .stat-label {
@@ -563,11 +570,11 @@
             font-size: 14px;
         }
 
-        th,
-        td {
+        th, td {
             padding: 10px 12px;
             text-align: left;
             border-bottom: 1px solid #eee;
+            color: var(--text-color);
         }
 
         th {
@@ -620,8 +627,7 @@
             border: 1px dashed #ccc;
         }
 
-        .receipt-header,
-        .receipt-footer {
+        .receipt-header, .receipt-footer {
             text-align: center;
             margin-bottom: 10px;
         }
@@ -654,34 +660,26 @@
         }
 
         @media (max-width: 768px) {
-
-            .pos-container,
-            .manager-container {
+            .pos-container, .manager-container {
                 grid-template-columns: 1fr;
             }
-
             .header-content {
                 flex-direction: column;
                 gap: 10px;
                 text-align: center;
             }
-
             .nav-tabs {
                 flex-wrap: nowrap;
             }
-
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             }
-
             .quick-access-item {
                 min-width: 100px;
             }
-
             .manager-sidebar {
                 position: static;
             }
-
             .cart-container {
                 position: static;
                 max-height: none;
@@ -692,29 +690,23 @@
             .container {
                 padding: 10px;
             }
-
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             }
-
             .quick-access-item {
                 min-width: 90px;
                 padding: 8px;
             }
-
             .product-card {
                 padding: 8px;
             }
-
             .nav-tab {
                 padding: 10px 12px;
                 font-size: 14px;
             }
-
             .payment-actions {
                 flex-direction: column;
             }
-
             .payment-actions .btn {
                 width: 100%;
             }
@@ -736,7 +728,7 @@
         }
 
         .modal-content {
-            background: white;
+            background: var(--card-bg);
             padding: 20px;
             border-radius: var(--radius);
             width: 100%;
@@ -765,12 +757,9 @@
             body * {
                 visibility: hidden;
             }
-
-            .receipt,
-            .receipt * {
+            .receipt, .receipt * {
                 visibility: visible;
             }
-
             .receipt {
                 position: absolute;
                 left: 0;
@@ -795,7 +784,7 @@
             padding: 15px;
             border-radius: var(--radius);
             margin-bottom: 15px;
-            background: white;
+            background: var(--card-bg);
         }
 
         .preview-header {
@@ -850,6 +839,8 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: var(--radius);
+            background: var(--card-bg);
+            color: var(--text-color);
         }
 
         .customer-section {
@@ -867,6 +858,8 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: var(--radius);
+            background: var(--card-bg);
+            color: var(--text-color);
         }
 
         .customer-info {
@@ -874,6 +867,7 @@
             padding: 10px;
             border-radius: var(--radius);
             margin-bottom: 15px;
+            color: var(--text-color);
         }
 
         .loyalty-points {
@@ -882,6 +876,7 @@
             border-radius: var(--radius);
             margin-bottom: 15px;
             text-align: center;
+            color: var(--text-color);
         }
 
         .featured-products {
@@ -895,7 +890,7 @@
         }
 
         .featured-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 12px;
             box-shadow: var(--shadow);
@@ -924,7 +919,7 @@
         }
 
         .chart-container {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
@@ -973,13 +968,14 @@
         }
 
         .category-btn {
-            background: white;
+            background: var(--card-bg);
             border: 1px solid #ddd;
             border-radius: var(--radius);
             padding: 8px 12px;
             cursor: pointer;
             transition: all 0.3s;
             white-space: nowrap;
+            color: var(--text-color);
         }
 
         .category-btn.active {
@@ -989,11 +985,28 @@
         }
 
         .category-btn:hover:not(.active) {
-            background-color: #f9f9f9;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Manager Cards - Consistent Sizing */
+        .manager-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            height: 150px; /* Consistent height for all manager cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Quick Access Setup Cards */
+        .quick-access-card {
+            height: 180px; /* Consistent height for quick access cards */
         }
     </style>
 </head>
-
 <body>
     <!-- Login Interface -->
     <div id="loginSection" class="login-container">
@@ -1011,8 +1024,7 @@
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="Enter your password"
-                        required>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
                 </div>
 
                 <div class="user-type-selector">
@@ -1088,8 +1100,7 @@
                     <div class="products-section">
                         <h2>Products</h2>
                         <div class="search-container">
-                            <input type="text" id="productSearch" class="search-box"
-                                placeholder="Search by name or barcode...">
+                            <input type="text" id="productSearch" class="search-box" placeholder="Search by name or barcode...">
                         </div>
 
                         <!-- Category Filter -->
@@ -1148,8 +1159,7 @@
 
                         <div class="cart-total">
                             Subtotal: TSh <span id="cartSubtotal">0.00</span><br>
-                            <div id="discountLine" class="hidden">Discount: -TSh <span id="discountTotal">0.00</span>
-                            </div>
+                            <div id="discountLine" class="hidden">Discount: -TSh <span id="discountTotal">0.00</span></div>
                             Total: TSh <span id="cartTotal">0.00</span>
                         </div>
 
@@ -1260,8 +1270,7 @@
                             <button class="btn btn-secondary" id="exportProducts">Export Products</button>
 
                             <div class="search-container" style="margin-top: 15px;">
-                                <input type="text" id="productManagementSearch" class="search-box"
-                                    placeholder="Search products...">
+                                <input type="text" id="productManagementSearch" class="search-box" placeholder="Search products...">
                             </div>
 
                             <div class="table-container" style="margin-top: 20px;">
@@ -1288,8 +1297,7 @@
                         <!-- Quick Access Setup -->
                         <div id="managerQuickAccess" class="manager-tab-content hidden">
                             <h2>Quick Access Products</h2>
-                            <p>Click the buttons below to add or remove products from the quick access bar in the POS.
-                            </p>
+                            <p>Click the buttons below to add or remove products from the quick access bar in the POS.</p>
                             <div class="products-grid" id="quickAccessSetup">
                                 <!-- Products for quick access setup will be added here -->
                             </div>
@@ -1345,8 +1353,7 @@
                             <button class="btn btn-secondary" id="exportInventory">Export Inventory</button>
 
                             <div class="search-container" style="margin-top: 15px;">
-                                <input type="text" id="inventorySearch" class="search-box"
-                                    placeholder="Search inventory...">
+                                <input type="text" id="inventorySearch" class="search-box" placeholder="Search inventory...">
                             </div>
 
                             <div class="table-container" style="margin-top: 20px;">
@@ -1376,8 +1383,7 @@
                             <button class="btn btn-secondary" id="importCustomers">Import Customers</button>
 
                             <div class="search-container" style="margin-top: 15px;">
-                                <input type="text" id="customerSearch" class="search-box"
-                                    placeholder="Search customers...">
+                                <input type="text" id="customerSearch" class="search-box" placeholder="Search customers...">
                             </div>
 
                             <div class="table-container" style="margin-top: 20px;">
@@ -1755,9 +1761,15 @@
             if (state.customization.wallpaper) {
                 document.body.style.setProperty('--wallpaper', `url(${state.customization.wallpaper})`);
                 document.getElementById('previewWallpaper').style.backgroundImage = `url(${state.customization.wallpaper})`;
+                
+                // Calculate brightness and update text colors
+                calculateWallpaperBrightness(state.customization.wallpaper);
             } else {
                 document.body.style.setProperty('--wallpaper', 'none');
                 document.getElementById('previewWallpaper').style.backgroundImage = 'none';
+                
+                // Reset to default colors
+                resetTextColors();
             }
 
             // Update form fields
@@ -1766,6 +1778,66 @@
 
             // Update login screen
             document.getElementById('loginStoreName').textContent = state.customization.storeName;
+        }
+
+        // Calculate wallpaper brightness and update text colors
+        function calculateWallpaperBrightness(wallpaperUrl) {
+            const img = new Image();
+            img.crossOrigin = "Anonymous";
+            img.src = wallpaperUrl;
+            
+            img.onload = function() {
+                // Create a canvas to analyze the image
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                
+                // Get image data
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                
+                // Calculate average brightness
+                let totalBrightness = 0;
+                for (let i = 0; i < data.length; i += 4) {
+                    // Calculate brightness using weighted average
+                    const brightness = (data[i] * 0.299 + data[i+1] * 0.587 + data[i+2] * 0.114);
+                    totalBrightness += brightness;
+                }
+                
+                const averageBrightness = totalBrightness / (data.length / 4);
+                
+                // Update text colors based on brightness
+                updateTextColors(averageBrightness);
+            };
+            
+            img.onerror = function() {
+                // If image fails to load, use default colors
+                resetTextColors();
+            };
+        }
+
+        // Update text colors based on wallpaper brightness
+        function updateTextColors(brightness) {
+            // Brightness range: 0 (dark) to 255 (light)
+            const threshold = 128;
+            
+            if (brightness < threshold) {
+                // Dark wallpaper - use light text
+                document.documentElement.style.setProperty('--text-color', '#ffffff');
+                document.documentElement.style.setProperty('--card-bg', 'rgba(0, 0, 0, 0.7)');
+            } else {
+                // Light wallpaper - use dark text
+                document.documentElement.style.setProperty('--text-color', '#2c3e50');
+                document.documentElement.style.setProperty('--card-bg', 'rgba(255, 255, 255, 0.92)');
+            }
+        }
+
+        // Reset text colors to default
+        function resetTextColors() {
+            document.documentElement.style.setProperty('--text-color', '#2c3e50');
+            document.documentElement.style.setProperty('--card-bg', 'rgba(255, 255, 255, 0.92)');
         }
 
         // Initialize with sample data
@@ -2723,7 +2795,7 @@
             state.products.forEach(product => {
                 const isInQuickAccess = state.quickAccessProducts.includes(product.id);
                 const productCard = document.createElement('div');
-                productCard.className = 'product-card';
+                productCard.className = 'product-card quick-access-card'; // Added consistent class
                 productCard.innerHTML = `
                     <div class="product-name">${product.name}</div>
                     <div class="product-price">${state.businessSettings.currencySymbol} ${product.price.toLocaleString()}</div>
@@ -3369,6 +3441,8 @@
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     document.getElementById('previewWallpaper').style.backgroundImage = `url(${e.target.result})`;
+                    // Calculate brightness and update text colors
+                    calculateWallpaperBrightness(e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
@@ -3439,5 +3513,4 @@
         }
     </script>
 </body>
-
 </html>
