@@ -518,11 +518,14 @@
             min-width: 120px;
         }
 
-        /* Manager App Styles */
+        /* Manager App Styles - Updated for consistent width */
         .manager-container {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .manager-sidebar {
@@ -533,6 +536,7 @@
             position: sticky;
             top: 120px;
             height: fit-content;
+            width: 100%;
         }
 
         .manager-content {
@@ -540,6 +544,7 @@
             border-radius: var(--radius);
             padding: 15px;
             box-shadow: var(--shadow);
+            width: 100%;
         }
 
         .manager-menu {
@@ -564,11 +569,13 @@
             color: white;
         }
 
+        /* Stats Grid - Consistent sizing */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 12px;
             margin-bottom: 15px;
+            width: 100%;
         }
 
         .stat-card {
@@ -582,6 +589,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            width: 100%;
         }
 
         .stat-value {
@@ -596,10 +604,12 @@
             font-size: 13px;
         }
 
+        /* Table containers - Ensure full width */
         .table-container {
             overflow-x: auto;
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
+            width: 100%;
         }
 
         table {
@@ -726,6 +736,7 @@
             }
             .manager-sidebar {
                 position: static;
+                width: 100%;
             }
             .cart-container {
                 position: static;
@@ -733,6 +744,7 @@
             }
             .stats-grid {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                width: 100%;
             }
         }
 
@@ -763,6 +775,10 @@
             }
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
+                width: 100%;
+            }
+            .manager-container {
+                width: 100%;
             }
         }
 
@@ -1057,6 +1073,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100%;
         }
 
         /* Quick Access Setup Cards */
