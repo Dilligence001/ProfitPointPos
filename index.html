@@ -993,272 +993,6 @@
                 max-width: 100%;
             }
         }
-
-        /* Tabs */
-        .tabs {
-            display: flex;
-            border-bottom: 1px solid var(--gray-200);
-            margin-bottom: 1rem;
-        }
-
-        .tab {
-            padding: 0.75rem 1.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-weight: 500;
-            color: var(--gray-500);
-            border-bottom: 2px solid transparent;
-            transition: var(--transition);
-        }
-
-        .tab.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Inventory Management */
-        .inventory-actions {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .inventory-table {
-            width: 100%;
-        }
-
-        .inventory-table th,
-        .inventory-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .inventory-table th {
-            background: var(--gray-50);
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-
-        .stock-low {
-            color: var(--warning);
-            font-weight: 600;
-        }
-
-        .stock-out {
-            color: var(--danger);
-            font-weight: 600;
-        }
-
-        /* Customer Management */
-        .customer-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .customer-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .customer-name {
-            font-weight: 600;
-            color: var(--gray-800);
-        }
-
-        .customer-details {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-        }
-
-        /* Reports */
-        .report-filters {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .chart-container {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow);
-        }
-
-        .chart-placeholder {
-            height: 300px;
-            background: var(--gray-100);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-500);
-        }
-
-        /* Barcode Scanner */
-        .barcode-scanner {
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .scanner-video {
-            width: 100%;
-            border-radius: var(--radius);
-            background: var(--gray-900);
-        }
-
-        .scanner-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .scanner-frame {
-            width: 80%;
-            height: 200px;
-            border: 2px solid var(--primary);
-            border-radius: var(--radius);
-            position: relative;
-        }
-
-        .scanner-frame::before,
-        .scanner-frame::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--primary);
-        }
-
-        .scanner-frame::before {
-            top: -2px;
-            left: -2px;
-            border-right: none;
-            border-bottom: none;
-        }
-
-        .scanner-frame::after {
-            bottom: -2px;
-            right: -2px;
-            border-left: none;
-            border-top: none;
-        }
-
-        /* Loyalty Program */
-        .loyalty-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .loyalty-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .loyalty-points {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .loyalty-tier {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--radius);
-            font-size: 0.875rem;
-        }
-
-        .loyalty-progress {
-            height: 8px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            margin: 1rem 0;
-            overflow: hidden;
-        }
-
-        .loyalty-progress-bar {
-            height: 100%;
-            background: var(--white);
-            border-radius: 4px;
-        }
-
-        /* Shift Management */
-        .shift-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow);
-        }
-
-        .shift-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--radius);
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .shift-active {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--success);
-        }
-
-        .shift-inactive {
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger);
-        }
-
-        .shift-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .shift-detail {
-            text-align: center;
-        }
-
-        .shift-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gray-800);
-        }
-
-        .shift-label {
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
     </style>
 </head>
 <body>
@@ -1363,18 +1097,6 @@
                         <i class="fas fa-chart-bar"></i>
                         <span>Manager</span>
                     </a>
-                    <a href="#" class="nav-tab" data-tab="inventory">
-                        <i class="fas fa-warehouse"></i>
-                        <span>Inventory</span>
-                    </a>
-                    <a href="#" class="nav-tab" data-tab="customers">
-                        <i class="fas fa-users"></i>
-                        <span>Customers</span>
-                    </a>
-                    <a href="#" class="nav-tab" data-tab="reports">
-                        <i class="fas fa-chart-pie"></i>
-                        <span>Reports</span>
-                    </a>
                     <a href="#" class="nav-tab" data-tab="settings">
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
@@ -1385,7 +1107,7 @@
             <!-- Main Content -->
             <main class="main-content">
                 <!-- POS Terminal -->
-                <div id="posTab" class="tab-content active">
+                <div id="posTab" class="tab-content">
                     <div class="pos-layout">
                         <div class="products-section">
                             <!-- Search -->
@@ -1534,7 +1256,7 @@
                 </div>
 
                 <!-- Manager Dashboard -->
-                <div id="managerTab" class="tab-content">
+                <div id="managerTab" class="tab-content hidden">
                     <!-- Stats Overview -->
                     <div class="card mb-4">
                         <div class="card-header">
@@ -1572,58 +1294,6 @@
                                     </div>
                                     <div class="stat-value" id="totalCustomers">0</div>
                                     <div class="stat-label">Customers</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Shift Management -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="fas fa-clock"></i>
-                                Shift Management
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="shift-card">
-                                <div class="loyalty-header">
-                                    <div>
-                                        <div style="font-weight: 600; color: var(--gray-800);">Current Shift</div>
-                                        <div style="font-size: 0.875rem; color: var(--gray-500);" id="shiftDate">Loading...</div>
-                                    </div>
-                                    <div class="shift-status shift-active" id="shiftStatus">
-                                        <i class="fas fa-circle"></i>
-                                        Active
-                                    </div>
-                                </div>
-                                <div class="shift-details">
-                                    <div class="shift-detail">
-                                        <div class="shift-value" id="shiftSales">TSh 0</div>
-                                        <div class="shift-label">Sales</div>
-                                    </div>
-                                    <div class="shift-detail">
-                                        <div class="shift-value" id="shiftTransactions">0</div>
-                                        <div class="shift-label">Transactions</div>
-                                    </div>
-                                    <div class="shift-detail">
-                                        <div class="shift-value" id="shiftCustomers">0</div>
-                                        <div class="shift-label">Customers</div>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                                    <button class="btn btn-primary" id="startShift">
-                                        <i class="fas fa-play"></i>
-                                        Start Shift
-                                    </button>
-                                    <button class="btn btn-danger" id="endShift">
-                                        <i class="fas fa-stop"></i>
-                                        End Shift
-                                    </button>
-                                    <button class="btn btn-secondary" id="viewShiftReport">
-                                        <i class="fas fa-file-alt"></i>
-                                        Report
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1691,324 +1361,88 @@
                     </div>
                 </div>
 
-                <!-- Inventory Management -->
-                <div id="inventoryTab" class="tab-content">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="fas fa-warehouse"></i>
-                                Inventory Management
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="inventory-actions">
-                                <button class="btn btn-primary" id="addInventoryProduct">
-                                    <i class="fas fa-plus"></i>
-                                    Add Product
-                                </button>
-                                <button class="btn btn-secondary" id="importInventory">
-                                    <i class="fas fa-file-import"></i>
-                                    Import CSV
-                                </button>
-                                <button class="btn btn-warning" id="exportInventory">
-                                    <i class="fas fa-file-export"></i>
-                                    Export CSV
-                                </button>
-                                <button class="btn btn-info" id="lowStockReport">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    Low Stock Report
-                                </button>
-                            </div>
-
-                            <div class="table-container">
-                                <table class="inventory-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Category</th>
-                                            <th>Price</th>
-                                            <th>Stock</th>
-                                            <th>Status</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="inventoryTable">
-                                        <!-- Inventory items will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Customer Management -->
-                <div id="customersTab" class="tab-content">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="fas fa-users"></i>
-                                Customer Management
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="inventory-actions">
-                                <button class="btn btn-primary" id="addCustomerManager">
-                                    <i class="fas fa-user-plus"></i>
-                                    Add Customer
-                                </button>
-                                <button class="btn btn-secondary" id="importCustomers">
-                                    <i class="fas fa-file-import"></i>
-                                    Import CSV
-                                </button>
-                                <button class="btn btn-warning" id="exportCustomers">
-                                    <i class="fas fa-file-export"></i>
-                                    Export CSV
-                                </button>
-                                <button class="btn btn-info" id="sendPromotions">
-                                    <i class="fas fa-envelope"></i>
-                                    Send Promotions
-                                </button>
-                            </div>
-
-                            <div id="customersList">
-                                <!-- Customer cards will be populated here -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reports -->
-                <div id="reportsTab" class="tab-content">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="fas fa-chart-pie"></i>
-                                Reports & Analytics
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="report-filters">
-                                <div class="form-group">
-                                    <label class="form-label">Report Type</label>
-                                    <select id="reportType" class="form-input">
-                                        <option value="sales">Sales Report</option>
-                                        <option value="inventory">Inventory Report</option>
-                                        <option value="customer">Customer Report</option>
-                                        <option value="shift">Shift Report</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Date Range</label>
-                                    <select id="dateRange" class="form-input">
-                                        <option value="today">Today</option>
-                                        <option value="yesterday">Yesterday</option>
-                                        <option value="week">This Week</option>
-                                        <option value="month">This Month</option>
-                                        <option value="quarter">This Quarter</option>
-                                        <option value="year">This Year</option>
-                                        <option value="custom">Custom Range</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" id="customDateRange" style="display: none;">
-                                    <label class="form-label">Custom Range</label>
-                                    <div style="display: flex; gap: 0.5rem;">
-                                        <input type="date" id="startDate" class="form-input">
-                                        <input type="date" id="endDate" class="form-input">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">&nbsp;</label>
-                                    <button class="btn btn-primary btn-full" id="generateReportBtn">
-                                        <i class="fas fa-chart-bar"></i>
-                                        Generate Report
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="chart-container">
-                                <h4 style="margin-bottom: 1rem;" id="reportTitle">Sales Report</h4>
-                                <div class="chart-placeholder" id="chartPlaceholder">
-                                    <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                    <p>Select report type and generate report</p>
-                                </div>
-                            </div>
-
-                            <div class="table-container">
-                                <table class="table" id="reportTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Period</th>
-                                            <th>Sales</th>
-                                            <th>Transactions</th>
-                                            <th>Avg. Transaction</th>
-                                            <th>Growth</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="reportData">
-                                        <!-- Report data will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Settings -->
-                <div id="settingsTab" class="tab-content">
-                    <div class="tabs">
-                        <button class="tab active" data-tab="store">Store</button>
-                        <button class="tab" data-tab="business">Business</button>
-                        <button class="tab" data-tab="system">System</button>
-                        <button class="tab" data-tab="backup">Backup</button>
-                    </div>
-
-                    <!-- Store Settings -->
-                    <div class="tab-content active" data-tab-content="store">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h3 class="card-title">
-                                    <i class="fas fa-store"></i>
-                                    Store Information
-                                </h3>
+                <div id="settingsTab" class="tab-content hidden">
+                    <!-- Store Customization -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-store"></i>
+                                Store Information
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label" for="storeName">Store Name</label>
+                                <input type="text" id="storeName" class="form-input" placeholder="Enter store name">
                             </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label" for="storeName">Store Name</label>
-                                    <input type="text" id="storeName" class="form-input" placeholder="Enter store name">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="storeMotto">Store Motto</label>
-                                    <input type="text" id="storeMotto" class="form-input" placeholder="Enter store motto">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="storeAddress">Store Address</label>
-                                    <textarea id="storeAddress" class="form-input" rows="3" placeholder="Enter store address"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="storePhone">Phone Number</label>
-                                    <input type="text" id="storePhone" class="form-input" placeholder="Enter phone number">
-                                </div>
-                                <button class="btn btn-primary" id="saveStoreInfo">
-                                    <i class="fas fa-save"></i>
-                                    Save Changes
-                                </button>
+                            <div class="form-group">
+                                <label class="form-label" for="storeMotto">Store Motto</label>
+                                <input type="text" id="storeMotto" class="form-input" placeholder="Enter store motto">
                             </div>
+                            <button class="btn btn-primary" id="saveStoreInfo">
+                                <i class="fas fa-save"></i>
+                                Save Changes
+                            </button>
                         </div>
                     </div>
 
                     <!-- Business Settings -->
-                    <div class="tab-content" data-tab-content="business">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h3 class="card-title">
-                                    <i class="fas fa-cog"></i>
-                                    Business Settings
-                                </h3>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-cog"></i>
+                                Business Settings
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label" for="taxRate">Tax Rate (%)</label>
+                                <input type="number" id="taxRate" class="form-input" value="18" min="0" max="100" step="0.1">
                             </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label" for="taxRate">Tax Rate (%)</label>
-                                    <input type="number" id="taxRate" class="form-input" value="18" min="0" max="100" step="0.1">
+                            <div class="form-group">
+                                <label class="form-label" for="currencySymbol">Currency Symbol</label>
+                                <input type="text" id="currencySymbol" class="form-input" value="TSh" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lowStockThreshold">Low Stock Threshold</label>
+                                <input type="number" id="lowStockThreshold" class="form-input" value="10" min="1">
+                            </div>
+                            <button class="btn btn-primary" id="saveBusinessSettings">
+                                <i class="fas fa-save"></i>
+                                Save Settings
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- System Information -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-info-circle"></i>
+                                System Information
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label" for="terminalId">Terminal ID</label>
+                                <input type="text" id="terminalId" class="form-input" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Sync Status</label>
+                                <div id="syncStatus" class="text-danger">
+                                    <i class="fas fa-circle"></i> Offline
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="currencySymbol">Currency Symbol</label>
-                                    <input type="text" id="currencySymbol" class="form-input" value="TSh" maxlength="5">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="lowStockThreshold">Low Stock Threshold</label>
-                                    <input type="number" id="lowStockThreshold" class="form-input" value="10" min="1">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="loyaltyPointsRate">Loyalty Points Rate</label>
-                                    <input type="number" id="loyaltyPointsRate" class="form-input" value="1" min="0" step="0.1">
-                                    <small style="color: var(--gray-500);">Points per currency unit spent</small>
-                                </div>
-                                <button class="btn btn-primary" id="saveBusinessSettings">
-                                    <i class="fas fa-save"></i>
-                                    Save Settings
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <button class="btn btn-primary" id="syncData">
+                                    <i class="fas fa-sync"></i>
+                                    Sync Data
                                 </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- System Settings -->
-                    <div class="tab-content" data-tab-content="system">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h3 class="card-title">
-                                    <i class="fas fa-info-circle"></i>
-                                    System Information
-                                </h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label" for="terminalId">Terminal ID</label>
-                                    <input type="text" id="terminalId" class="form-input" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Sync Status</label>
-                                    <div id="syncStatus" class="text-danger">
-                                        <i class="fas fa-circle"></i> Offline
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Database Size</label>
-                                    <div id="dbSize">Calculating...</div>
-                                </div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <button class="btn btn-primary" id="syncData">
-                                        <i class="fas fa-sync"></i>
-                                        Sync Data
-                                    </button>
-                                    <button class="btn btn-danger" id="clearData">
-                                        <i class="fas fa-trash"></i>
-                                        Clear Data
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Backup Settings -->
-                    <div class="tab-content" data-tab-content="backup">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">
-                                    <i class="fas fa-database"></i>
-                                    Data Backup & Restore
-                                </h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label">Backup Frequency</label>
-                                    <select id="backupFrequency" class="form-input">
-                                        <option value="daily">Daily</option>
-                                        <option value="weekly">Weekly</option>
-                                        <option value="monthly">Monthly</option>
-                                        <option value="manual">Manual Only</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Last Backup</label>
-                                    <div id="lastBackup">Never</div>
-                                </div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <button class="btn btn-primary" id="createBackup">
-                                        <i class="fas fa-save"></i>
-                                        Create Backup
-                                    </button>
-                                    <button class="btn btn-secondary" id="restoreBackup">
-                                        <i class="fas fa-undo"></i>
-                                        Restore Backup
-                                    </button>
-                                </div>
-                                <div style="margin-top: 1.5rem;">
-                                    <h4 style="margin-bottom: 1rem;">Backup Files</h4>
-                                    <div id="backupFiles" class="text-center" style="padding: 2rem; color: var(--gray-400);">
-                                        <i class="fas fa-database" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                                        <p>No backup files found</p>
-                                    </div>
-                                </div>
+                                <button class="btn btn-danger" id="clearData">
+                                    <i class="fas fa-trash"></i>
+                                    Clear Data
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -2040,24 +1474,12 @@
                             <input type="number" id="productPrice" class="form-input" step="0.01" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="productCost">Cost (TSh)</label>
-                            <input type="number" id="productCost" class="form-input" step="0.01">
-                        </div>
-                        <div class="form-group">
                             <label class="form-label" for="productStock">Stock</label>
                             <input type="number" id="productStock" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="productMinStock">Minimum Stock</label>
-                            <input type="number" id="productMinStock" class="form-input" value="5">
-                        </div>
-                        <div class="form-group">
                             <label class="form-label" for="productCategory">Category</label>
                             <input type="text" id="productCategory" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="productSupplier">Supplier</label>
-                            <input type="text" id="productSupplier" class="form-input">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="productDescription">Description</label>
@@ -2105,10 +1527,6 @@
                             <label class="form-label" for="customerAddress">Address</label>
                             <textarea id="customerAddress" class="form-input" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="customerBirthday">Birthday</label>
-                            <input type="date" id="customerBirthday" class="form-input">
-                        </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
                             <button type="button" class="btn btn-secondary" id="cancelCustomer">Cancel</button>
                             <button type="submit" class="btn btn-primary">Save Customer</button>
@@ -2148,39 +1566,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Barcode Scanner Modal -->
-        <div id="barcodeModal" class="modal hidden">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Barcode Scanner</h2>
-                    <button class="modal-close" id="closeBarcodeModal">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="barcode-scanner">
-                        <video id="scannerVideo" class="scanner-video" autoplay playsinline></video>
-                        <div class="scanner-overlay">
-                            <div class="scanner-frame"></div>
-                        </div>
-                    </div>
-                    <div class="text-center" style="margin-top: 1rem;">
-                        <p>Point camera at barcode to scan</p>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
-                        <button class="btn btn-secondary" id="manualBarcode">
-                            <i class="fas fa-keyboard"></i>
-                            Manual Entry
-                        </button>
-                        <button class="btn btn-primary" id="toggleScanner">
-                            <i class="fas fa-camera"></i>
-                            Start Scanner
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
@@ -2203,22 +1588,15 @@
             editingCustomer: null,
             currentCustomer: null,
             discount: 0,
-            currentShift: null,
-            shifts: [],
             businessSettings: {
                 taxRate: 18,
                 currencySymbol: 'TSh',
-                lowStockThreshold: 10,
-                loyaltyPointsRate: 1
+                lowStockThreshold: 10
             },
             storeInfo: {
                 name: '7SQUARE POS',
-                motto: 'Modern Point of Sale System',
-                address: '',
-                phone: ''
-            },
-            scannerActive: false,
-            scanner: null
+                motto: 'Modern Point of Sale System'
+            }
         };
 
         // Initialize the application
@@ -2251,9 +1629,6 @@
             document.getElementById('terminalId').value = localStorage.getItem('terminalId');
             loadBusinessSettings();
             loadStoreInfo();
-            calculateDatabaseSize();
-            loadBackupInfo();
-            checkCurrentShift();
         }
 
         // Load data from localStorage
@@ -2263,7 +1638,6 @@
             state.quickAccessProducts = JSON.parse(localStorage.getItem('quickAccessProducts') || '[]');
             state.featuredProducts = JSON.parse(localStorage.getItem('featuredProducts') || '[]');
             state.customers = JSON.parse(localStorage.getItem('customers') || '[]');
-            state.shifts = JSON.parse(localStorage.getItem('shifts') || '[]');
 
             const savedStoreInfo = localStorage.getItem('storeInfo');
             if (savedStoreInfo) {
@@ -2284,7 +1658,6 @@
                 document.getElementById('taxRate').value = state.businessSettings.taxRate;
                 document.getElementById('currencySymbol').value = state.businessSettings.currencySymbol;
                 document.getElementById('lowStockThreshold').value = state.businessSettings.lowStockThreshold;
-                document.getElementById('loyaltyPointsRate').value = state.businessSettings.loyaltyPointsRate;
             }
         }
 
@@ -2292,8 +1665,6 @@
         function loadStoreInfo() {
             document.getElementById('storeName').value = state.storeInfo.name;
             document.getElementById('storeMotto').value = state.storeInfo.motto;
-            document.getElementById('storeAddress').value = state.storeInfo.address;
-            document.getElementById('storePhone').value = state.storeInfo.phone;
             document.getElementById('headerStoreName').textContent = state.storeInfo.name;
             document.getElementById('loginStoreName').textContent = state.storeInfo.name;
         }
@@ -2301,19 +1672,19 @@
         // Initialize with sample data
         function initializeSampleData() {
             state.products = [
-                { id: '1', name: 'Maize Flour', barcode: '123456', price: 2500, cost: 2000, stock: 50, minStock: 5, category: 'Food', supplier: 'Local Supplier', description: '1kg pack of maize flour', featured: true },
-                { id: '2', name: 'Cooking Oil', barcode: '789012', price: 4500, cost: 3800, stock: 30, minStock: 5, category: 'Food', supplier: 'Oil Co.', description: '1L bottle of cooking oil', featured: true },
-                { id: '3', name: 'Sugar', barcode: '345678', price: 2000, cost: 1600, stock: 40, minStock: 5, category: 'Food', supplier: 'Sugar Inc.', description: '1kg pack of sugar', featured: false },
-                { id: '4', name: 'Rice', barcode: '901234', price: 3000, cost: 2400, stock: 25, minStock: 5, category: 'Food', supplier: 'Rice Imports', description: '1kg pack of rice', featured: false },
-                { id: '5', name: 'Soap', barcode: '567890', price: 1500, cost: 1200, stock: 60, minStock: 5, category: 'Personal Care', supplier: 'Soap Co.', description: 'Bar of soap', featured: false },
-                { id: '6', name: 'Toothpaste', barcode: '234567', price: 3500, cost: 2800, stock: 35, minStock: 5, category: 'Personal Care', supplier: 'Dental Corp', description: 'Tube of toothpaste', featured: false },
-                { id: '7', name: 'Biscuits', barcode: '890123', price: 1200, cost: 900, stock: 80, minStock: 5, category: 'Snacks', supplier: 'Bakery Ltd', description: 'Packet of biscuits', featured: true },
-                { id: '8', name: 'Soda', barcode: '456789', price: 1500, cost: 1100, stock: 100, minStock: 5, category: 'Beverages', supplier: 'Beverage Co.', description: '500ml bottle of soda', featured: true }
+                { id: '1', name: 'Maize Flour', barcode: '123456', price: 2500, stock: 50, minStock: 5, category: 'Food', description: '1kg pack of maize flour', featured: true },
+                { id: '2', name: 'Cooking Oil', barcode: '789012', price: 4500, stock: 30, minStock: 5, category: 'Food', description: '1L bottle of cooking oil', featured: true },
+                { id: '3', name: 'Sugar', barcode: '345678', price: 2000, stock: 40, minStock: 5, category: 'Food', description: '1kg pack of sugar', featured: false },
+                { id: '4', name: 'Rice', barcode: '901234', price: 3000, stock: 25, minStock: 5, category: 'Food', description: '1kg pack of rice', featured: false },
+                { id: '5', name: 'Soap', barcode: '567890', price: 1500, stock: 60, minStock: 5, category: 'Personal Care', description: 'Bar of soap', featured: false },
+                { id: '6', name: 'Toothpaste', barcode: '234567', price: 3500, stock: 35, minStock: 5, category: 'Personal Care', description: 'Tube of toothpaste', featured: false },
+                { id: '7', name: 'Biscuits', barcode: '890123', price: 1200, stock: 80, minStock: 5, category: 'Snacks', description: 'Packet of biscuits', featured: true },
+                { id: '8', name: 'Soda', barcode: '456789', price: 1500, stock: 100, minStock: 5, category: 'Beverages', description: '500ml bottle of soda', featured: true }
             ];
 
             state.customers = [
-                { id: 'CUST-001', name: 'John Doe', phone: '+255123456789', email: 'john@example.com', address: 'Dar es Salaam', birthday: '1990-05-15', loyaltyPoints: 150, totalSpent: 45000, lastPurchase: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString() },
-                { id: 'CUST-002', name: 'Jane Smith', phone: '+255987654321', email: 'jane@example.com', address: 'Arusha', birthday: '1985-08-22', loyaltyPoints: 75, totalSpent: 22500, lastPurchase: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString() }
+                { id: 'CUST-001', name: 'John Doe', phone: '+255123456789', email: 'john@example.com', address: 'Dar es Salaam', loyaltyPoints: 150, totalSpent: 45000, lastPurchase: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString() },
+                { id: 'CUST-002', name: 'Jane Smith', phone: '+255987654321', email: 'jane@example.com', address: 'Arusha', loyaltyPoints: 75, totalSpent: 22500, lastPurchase: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString() }
             ];
 
             state.quickAccessProducts = state.products.slice(0, 4).map(p => p.id);
@@ -2382,50 +1753,6 @@
             document.getElementById('saveBusinessSettings').addEventListener('click', saveBusinessSettings);
             document.getElementById('saveStoreInfo').addEventListener('click', saveStoreInfo);
             document.getElementById('logoutButton').addEventListener('click', logout);
-
-            // Shift management
-            document.getElementById('startShift').addEventListener('click', startShift);
-            document.getElementById('endShift').addEventListener('click', endShift);
-            document.getElementById('viewShiftReport').addEventListener('click', viewShiftReport);
-
-            // Inventory management
-            document.getElementById('addInventoryProduct').addEventListener('click', showAddProductModal);
-            document.getElementById('importInventory').addEventListener('click', importInventory);
-            document.getElementById('exportInventory').addEventListener('click', exportInventory);
-            document.getElementById('lowStockReport').addEventListener('click', showLowStockReport);
-
-            // Customer management
-            document.getElementById('addCustomerManager').addEventListener('click', showAddCustomerModal);
-            document.getElementById('importCustomers').addEventListener('click', importCustomers);
-            document.getElementById('exportCustomers').addEventListener('click', exportCustomers);
-            document.getElementById('sendPromotions').addEventListener('click', sendPromotions);
-
-            // Reports
-            document.getElementById('dateRange').addEventListener('change', toggleCustomDateRange);
-            document.getElementById('generateReportBtn').addEventListener('click', generateReport);
-
-            // Backup
-            document.getElementById('createBackup').addEventListener('click', createBackup);
-            document.getElementById('restoreBackup').addEventListener('click', restoreBackup);
-
-            // Settings tabs
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.addEventListener('click', function () {
-                    const tabName = this.dataset.tab;
-                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    document.querySelectorAll('[data-tab-content]').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    document.querySelector(`[data-tab-content="${tabName}"]`).classList.add('active');
-                });
-            });
-
-            // Barcode scanner
-            document.getElementById('toggleScanner').addEventListener('click', toggleBarcodeScanner);
-            document.getElementById('closeBarcodeModal').addEventListener('click', hideBarcodeModal);
-            document.getElementById('manualBarcode').addEventListener('click', showManualBarcodeEntry);
         }
 
         // Login functions
@@ -2441,8 +1768,6 @@
             applyRoleBasedAccess();
             renderPOS();
             updateManagerDashboard();
-            renderInventory();
-            renderCustomers();
         }
 
         function handleLogin(e) {
@@ -2502,7 +1827,7 @@
                 const tabName = tab.dataset.tab;
                 if (state.currentUser.role === 'cashier' && tabName !== 'pos') {
                     tab.style.display = 'none';
-                } else if (state.currentUser.role === 'manager' && (tabName === 'settings' || tabName === 'reports')) {
+                } else if (state.currentUser.role === 'manager' && tabName === 'settings') {
                     tab.style.display = 'none';
                 } else if (state.currentUser.role === 'admin' && tabName !== 'settings') {
                     tab.style.display = 'none';
@@ -2534,12 +1859,6 @@
                 updateManagerDashboard();
             } else if (tabName === 'pos') {
                 renderPOS();
-            } else if (tabName === 'inventory') {
-                renderInventory();
-            } else if (tabName === 'customers') {
-                renderCustomers();
-            } else if (tabName === 'reports') {
-                // Initialize reports tab
             }
         }
 
@@ -2917,8 +2236,7 @@
                 amountReceived: amountReceived,
                 change: amountReceived - total,
                 discount: state.discount,
-                customer: state.currentCustomer,
-                shiftId: state.currentShift ? state.currentShift.id : null
+                customer: state.currentCustomer
             };
 
             state.cart.forEach(cartItem => {
@@ -2931,18 +2249,10 @@
             if (state.currentCustomer) {
                 const customer = state.customers.find(c => c.id === state.currentCustomer.id);
                 if (customer) {
-                    const pointsEarned = Math.floor(total * state.businessSettings.loyaltyPointsRate / 1000);
+                    const pointsEarned = Math.floor(total / 1000);
                     customer.loyaltyPoints += pointsEarned;
                     customer.totalSpent += total;
                     customer.lastPurchase = new Date().toISOString();
-                }
-            }
-
-            if (state.currentShift) {
-                state.currentShift.sales += total;
-                state.currentShift.transactions += 1;
-                if (state.currentCustomer) {
-                    state.currentShift.customers += 1;
                 }
             }
 
@@ -2950,14 +2260,10 @@
             saveData('transactions', state.transactions);
             saveData('products', state.products);
             saveData('customers', state.customers);
-            if (state.currentShift) {
-                saveData('shifts', state.shifts);
-            }
 
             generateReceipt(transaction);
             clearCart();
             renderProducts();
-            updateManagerDashboard();
 
             if (state.currentTab === 'manager') {
                 updateManagerDashboard();
@@ -2991,8 +2297,6 @@
                 <div class="receipt-header">
                     <h3>${state.storeInfo.name}</h3>
                     <p>${state.storeInfo.motto}</p>
-                    <p>${state.storeInfo.address}</p>
-                    <p>${state.storeInfo.phone}</p>
                     <p>Receipt #${transaction.id}</p>
                     <p>${new Date(transaction.timestamp).toLocaleString()}</p>
                 </div>
@@ -3043,11 +2347,10 @@
             `;
 
             if (transaction.customer) {
-                const pointsEarned = Math.floor(transaction.amount * state.businessSettings.loyaltyPointsRate / 1000);
                 receiptHTML += `
                     <div class="receipt-footer">
                         <p>Customer: ${transaction.customer.name}</p>
-                        <p>Points Earned: ${pointsEarned}</p>
+                        <p>Points Earned: ${Math.floor(transaction.amount / 1000)}</p>
                     </div>
                 `;
             }
@@ -3135,11 +2438,8 @@
                 name: document.getElementById('productName').value,
                 barcode: document.getElementById('productBarcode').value,
                 price: parseFloat(document.getElementById('productPrice').value),
-                cost: parseFloat(document.getElementById('productCost').value) || 0,
                 stock: parseInt(document.getElementById('productStock').value),
-                minStock: parseInt(document.getElementById('productMinStock').value) || 5,
                 category: document.getElementById('productCategory').value,
-                supplier: document.getElementById('productSupplier').value,
                 description: document.getElementById('productDescription').value,
                 featured: document.getElementById('productFeatured').checked
             };
@@ -3155,7 +2455,6 @@
             saveData('products', state.products);
             hideProductModal();
             renderPOS();
-            renderInventory();
             updateManagerDashboard();
         }
 
@@ -3182,8 +2481,7 @@
                 name: document.getElementById('customerNameModal').value,
                 phone: document.getElementById('customerPhone').value,
                 email: document.getElementById('customerEmail').value,
-                address: document.getElementById('customerAddress').value,
-                birthday: document.getElementById('customerBirthday').value
+                address: document.getElementById('customerAddress').value
             };
 
             if (state.editingCustomer) {
@@ -3198,611 +2496,7 @@
 
             saveData('customers', state.customers);
             hideCustomerModal();
-            renderCustomers();
             updateManagerDashboard();
-        }
-
-        // Shift Management
-        function checkCurrentShift() {
-            const today = new Date().toDateString();
-            state.currentShift = state.shifts.find(shift => 
-                new Date(shift.startTime).toDateString() === today && !shift.endTime
-            );
-
-            updateShiftDisplay();
-        }
-
-        function updateShiftDisplay() {
-            const shiftDate = document.getElementById('shiftDate');
-            const shiftStatus = document.getElementById('shiftStatus');
-            const shiftSales = document.getElementById('shiftSales');
-            const shiftTransactions = document.getElementById('shiftTransactions');
-            const shiftCustomers = document.getElementById('shiftCustomers');
-            const startShiftBtn = document.getElementById('startShift');
-            const endShiftBtn = document.getElementById('endShift');
-
-            if (state.currentShift) {
-                shiftDate.textContent = new Date(state.currentShift.startTime).toLocaleString();
-                shiftStatus.innerHTML = '<i class="fas fa-circle"></i> Active';
-                shiftStatus.className = 'shift-status shift-active';
-                shiftSales.textContent = state.businessSettings.currencySymbol + ' ' + state.currentShift.sales.toLocaleString();
-                shiftTransactions.textContent = state.currentShift.transactions;
-                shiftCustomers.textContent = state.currentShift.customers;
-                startShiftBtn.disabled = true;
-                endShiftBtn.disabled = false;
-            } else {
-                shiftDate.textContent = 'No active shift';
-                shiftStatus.innerHTML = '<i class="fas fa-circle"></i> Inactive';
-                shiftStatus.className = 'shift-status shift-inactive';
-                shiftSales.textContent = state.businessSettings.currencySymbol + ' 0';
-                shiftTransactions.textContent = '0';
-                shiftCustomers.textContent = '0';
-                startShiftBtn.disabled = false;
-                endShiftBtn.disabled = true;
-            }
-        }
-
-        function startShift() {
-            const shift = {
-                id: 'SHIFT-' + Date.now(),
-                startTime: new Date().toISOString(),
-                endTime: null,
-                sales: 0,
-                transactions: 0,
-                customers: 0,
-                cashier: state.currentUser.name
-            };
-
-            state.currentShift = shift;
-            state.shifts.push(shift);
-            saveData('shifts', state.shifts);
-            updateShiftDisplay();
-            alert('Shift started successfully!');
-        }
-
-        function endShift() {
-            if (state.currentShift) {
-                state.currentShift.endTime = new Date().toISOString();
-                saveData('shifts', state.shifts);
-                
-                // Generate shift report
-                generateShiftReport(state.currentShift);
-                
-                state.currentShift = null;
-                updateShiftDisplay();
-                alert('Shift ended successfully!');
-            }
-        }
-
-        function viewShiftReport() {
-            if (state.currentShift) {
-                generateShiftReport(state.currentShift);
-            } else {
-                alert('No active shift to report on');
-            }
-        }
-
-        function generateShiftReport(shift) {
-            const reportContent = `
-                <h3>Shift Report - ${new Date(shift.startTime).toLocaleString()}</h3>
-                <p><strong>Cashier:</strong> ${shift.cashier}</p>
-                <p><strong>Duration:</strong> ${calculateShiftDuration(shift)}</p>
-                <p><strong>Total Sales:</strong> ${state.businessSettings.currencySymbol} ${shift.sales.toLocaleString()}</p>
-                <p><strong>Transactions:</strong> ${shift.transactions}</p>
-                <p><strong>Customers:</strong> ${shift.customers}</p>
-                <p><strong>Average Transaction:</strong> ${state.businessSettings.currencySymbol} ${(shift.sales / shift.transactions || 0).toFixed(2)}</p>
-            `;
-            
-            // In a real application, this would open a printable report
-            alert('Shift Report:\n\n' + 
-                  `Cashier: ${shift.cashier}\n` +
-                  `Duration: ${calculateShiftDuration(shift)}\n` +
-                  `Total Sales: ${state.businessSettings.currencySymbol} ${shift.sales.toLocaleString()}\n` +
-                  `Transactions: ${shift.transactions}\n` +
-                  `Customers: ${shift.customers}\n` +
-                  `Average Transaction: ${state.businessSettings.currencySymbol} ${(shift.sales / shift.transactions || 0).toFixed(2)}`);
-        }
-
-        function calculateShiftDuration(shift) {
-            const endTime = shift.endTime ? new Date(shift.endTime) : new Date();
-            const startTime = new Date(shift.startTime);
-            const duration = endTime - startTime;
-            
-            const hours = Math.floor(duration / (1000 * 60 * 60));
-            const minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
-            
-            return `${hours}h ${minutes}m`;
-        }
-
-        // Inventory Management
-        function renderInventory() {
-            const inventoryTable = document.getElementById('inventoryTable');
-            inventoryTable.innerHTML = '';
-
-            if (state.products.length === 0) {
-                inventoryTable.innerHTML = `
-                    <tr>
-                        <td colspan="6" class="text-center" style="padding: 2rem;">
-                            <i class="fas fa-box-open" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                            <p>No products in inventory</p>
-                        </td>
-                    </tr>
-                `;
-                return;
-            }
-
-            state.products.forEach(product => {
-                const row = document.createElement('tr');
-                
-                let stockStatus = 'text-success';
-                let stockText = product.stock;
-                
-                if (product.stock === 0) {
-                    stockStatus = 'stock-out';
-                    stockText = 'Out of Stock';
-                } else if (product.stock < state.businessSettings.lowStockThreshold) {
-                    stockStatus = 'stock-low';
-                    stockText = `${product.stock} (Low)`;
-                }
-
-                row.innerHTML = `
-                    <td>
-                        <div style="font-weight: 600;">${product.name}</div>
-                        <div style="font-size: 0.875rem; color: var(--gray-500);">${product.barcode || 'No barcode'}</div>
-                    </td>
-                    <td>${product.category || 'Uncategorized'}</td>
-                    <td>${state.businessSettings.currencySymbol} ${product.price.toLocaleString()}</td>
-                    <td class="${stockStatus}">${stockText}</td>
-                    <td>
-                        ${product.featured ? '<span class="text-warning"><i class="fas fa-star"></i> Featured</span>' : ''}
-                    </td>
-                    <td>
-                        <button class="btn btn-secondary btn-sm edit-product" data-id="${product.id}">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button class="btn btn-danger btn-sm delete-product" data-id="${product.id}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </td>
-                `;
-
-                row.querySelector('.edit-product').addEventListener('click', () => editProduct(product.id));
-                row.querySelector('.delete-product').addEventListener('click', () => deleteProduct(product.id));
-
-                inventoryTable.appendChild(row);
-            });
-        }
-
-        function editProduct(productId) {
-            const product = state.products.find(p => p.id === productId);
-            if (product) {
-                state.editingProduct = product;
-                document.getElementById('productModalTitle').textContent = 'Edit Product';
-                document.getElementById('productName').value = product.name;
-                document.getElementById('productBarcode').value = product.barcode || '';
-                document.getElementById('productPrice').value = product.price;
-                document.getElementById('productCost').value = product.cost || '';
-                document.getElementById('productStock').value = product.stock;
-                document.getElementById('productMinStock').value = product.minStock || 5;
-                document.getElementById('productCategory').value = product.category || '';
-                document.getElementById('productSupplier').value = product.supplier || '';
-                document.getElementById('productDescription').value = product.description || '';
-                document.getElementById('productFeatured').checked = product.featured || false;
-                document.getElementById('productModal').classList.remove('hidden');
-            }
-        }
-
-        function deleteProduct(productId) {
-            if (confirm('Are you sure you want to delete this product?')) {
-                state.products = state.products.filter(p => p.id !== productId);
-                saveData('products', state.products);
-                renderInventory();
-                renderPOS();
-                updateManagerDashboard();
-            }
-        }
-
-        function importInventory() {
-            alert('CSV import functionality would be implemented here');
-        }
-
-        function exportInventory() {
-            // Create CSV content
-            let csvContent = "Name,Barcode,Price,Cost,Stock,Min Stock,Category,Supplier,Description,Featured\n";
-            
-            state.products.forEach(product => {
-                const row = [
-                    product.name,
-                    product.barcode || '',
-                    product.price,
-                    product.cost || '',
-                    product.stock,
-                    product.minStock || 5,
-                    product.category || '',
-                    product.supplier || '',
-                    product.description || '',
-                    product.featured ? 'Yes' : 'No'
-                ];
-                csvContent += row.map(field => `"${field}"`).join(',') + '\n';
-            });
-            
-            // Create download link
-            const blob = new Blob([csvContent], { type: 'text/csv' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `inventory_${new Date().toISOString().split('T')[0]}.csv`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
-        function showLowStockReport() {
-            const lowStockProducts = state.products.filter(p => 
-                p.stock < state.businessSettings.lowStockThreshold
-            );
-            
-            if (lowStockProducts.length === 0) {
-                alert('No products with low stock');
-                return;
-            }
-            
-            let report = 'Low Stock Products:\n\n';
-            lowStockProducts.forEach(product => {
-                report += `${product.name}: ${product.stock} in stock (min: ${product.minStock || 5})\n`;
-            });
-            
-            alert(report);
-        }
-
-        // Customer Management
-        function renderCustomers() {
-            const customersList = document.getElementById('customersList');
-            customersList.innerHTML = '';
-
-            if (state.customers.length === 0) {
-                customersList.innerHTML = `
-                    <div class="text-center" style="padding: 2rem; color: var(--gray-400);">
-                        <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                        <p>No customers found</p>
-                    </div>
-                `;
-                return;
-            }
-
-            state.customers.forEach(customer => {
-                const customerCard = document.createElement('div');
-                customerCard.className = 'customer-card';
-                
-                customerCard.innerHTML = `
-                    <div class="customer-header">
-                        <div class="customer-name">${customer.name}</div>
-                        <div class="loyalty-tier">
-                            <i class="fas fa-star text-warning"></i>
-                            ${customer.loyaltyPoints} Points
-                        </div>
-                    </div>
-                    <div class="customer-details">
-                        <div><i class="fas fa-phone"></i> ${customer.phone || 'No phone'}</div>
-                        <div><i class="fas fa-envelope"></i> ${customer.email || 'No email'}</div>
-                        <div><i class="fas fa-map-marker-alt"></i> ${customer.address || 'No address'}</div>
-                        <div><i class="fas fa-shopping-cart"></i> Total Spent: ${state.businessSettings.currencySymbol} ${customer.totalSpent.toLocaleString()}</div>
-                        <div><i class="fas fa-clock"></i> Last Purchase: ${customer.lastPurchase ? new Date(customer.lastPurchase).toLocaleDateString() : 'Never'}</div>
-                    </div>
-                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                        <button class="btn btn-secondary btn-sm edit-customer" data-id="${customer.id}">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="btn btn-danger btn-sm delete-customer" data-id="${customer.id}">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </div>
-                `;
-
-                customerCard.querySelector('.edit-customer').addEventListener('click', () => editCustomer(customer.id));
-                customerCard.querySelector('.delete-customer').addEventListener('click', () => deleteCustomer(customer.id));
-
-                customersList.appendChild(customerCard);
-            });
-        }
-
-        function editCustomer(customerId) {
-            const customer = state.customers.find(c => c.id === customerId);
-            if (customer) {
-                state.editingCustomer = customer;
-                document.getElementById('customerModalTitle').textContent = 'Edit Customer';
-                document.getElementById('customerNameModal').value = customer.name;
-                document.getElementById('customerPhone').value = customer.phone || '';
-                document.getElementById('customerEmail').value = customer.email || '';
-                document.getElementById('customerAddress').value = customer.address || '';
-                document.getElementById('customerBirthday').value = customer.birthday || '';
-                document.getElementById('customerModal').classList.remove('hidden');
-            }
-        }
-
-        function deleteCustomer(customerId) {
-            if (confirm('Are you sure you want to delete this customer?')) {
-                state.customers = state.customers.filter(c => c.id !== customerId);
-                saveData('customers', state.customers);
-                renderCustomers();
-                updateManagerDashboard();
-            }
-        }
-
-        function importCustomers() {
-            alert('CSV import functionality would be implemented here');
-        }
-
-        function exportCustomers() {
-            // Create CSV content
-            let csvContent = "Name,Phone,Email,Address,Birthday,Loyalty Points,Total Spent,Last Purchase\n";
-            
-            state.customers.forEach(customer => {
-                const row = [
-                    customer.name,
-                    customer.phone || '',
-                    customer.email || '',
-                    customer.address || '',
-                    customer.birthday || '',
-                    customer.loyaltyPoints,
-                    customer.totalSpent,
-                    customer.lastPurchase ? new Date(customer.lastPurchase).toLocaleDateString() : ''
-                ];
-                csvContent += row.map(field => `"${field}"`).join(',') + '\n';
-            });
-            
-            // Create download link
-            const blob = new Blob([csvContent], { type: 'text/csv' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `customers_${new Date().toISOString().split('T')[0]}.csv`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
-        function sendPromotions() {
-            alert('Promotional email/SMS functionality would be implemented here');
-        }
-
-        // Reports
-        function toggleCustomDateRange() {
-            const dateRange = document.getElementById('dateRange').value;
-            const customRange = document.getElementById('customDateRange');
-            
-            if (dateRange === 'custom') {
-                customRange.style.display = 'block';
-            } else {
-                customRange.style.display = 'none';
-            }
-        }
-
-        function generateReport() {
-            const reportType = document.getElementById('reportType').value;
-            const dateRange = document.getElementById('dateRange').value;
-            
-            let startDate, endDate;
-            
-            // Calculate date range
-            const today = new Date();
-            switch (dateRange) {
-                case 'today':
-                    startDate = new Date(today);
-                    endDate = new Date(today);
-                    break;
-                case 'yesterday':
-                    startDate = new Date(today);
-                    startDate.setDate(today.getDate() - 1);
-                    endDate = new Date(startDate);
-                    break;
-                case 'week':
-                    startDate = new Date(today);
-                    startDate.setDate(today.getDate() - today.getDay());
-                    endDate = new Date(today);
-                    break;
-                case 'month':
-                    startDate = new Date(today.getFullYear(), today.getMonth(), 1);
-                    endDate = new Date(today);
-                    break;
-                case 'quarter':
-                    const quarter = Math.floor(today.getMonth() / 3);
-                    startDate = new Date(today.getFullYear(), quarter * 3, 1);
-                    endDate = new Date(today);
-                    break;
-                case 'year':
-                    startDate = new Date(today.getFullYear(), 0, 1);
-                    endDate = new Date(today);
-                    break;
-                case 'custom':
-                    startDate = new Date(document.getElementById('startDate').value);
-                    endDate = new Date(document.getElementById('endDate').value);
-                    break;
-            }
-            
-            // Filter transactions by date range
-            const filteredTransactions = state.transactions.filter(t => {
-                const transactionDate = new Date(t.timestamp);
-                return transactionDate >= startDate && transactionDate <= endDate;
-            });
-            
-            // Generate report based on type
-            switch (reportType) {
-                case 'sales':
-                    generateSalesReport(filteredTransactions, startDate, endDate);
-                    break;
-                case 'inventory':
-                    generateInventoryReport();
-                    break;
-                case 'customer':
-                    generateCustomerReport();
-                    break;
-                case 'shift':
-                    generateShiftReports(startDate, endDate);
-                    break;
-            }
-        }
-
-        function generateSalesReport(transactions, startDate, endDate) {
-            document.getElementById('reportTitle').textContent = `Sales Report (${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()})`;
-            
-            const totalSales = transactions.reduce((sum, t) => sum + t.amount, 0);
-            const totalTransactions = transactions.length;
-            const avgTransaction = totalTransactions > 0 ? totalSales / totalTransactions : 0;
-            
-            // Calculate daily breakdown
-            const dailySales = {};
-            transactions.forEach(t => {
-                const date = new Date(t.timestamp).toDateString();
-                if (!dailySales[date]) {
-                    dailySales[date] = { sales: 0, transactions: 0 };
-                }
-                dailySales[date].sales += t.amount;
-                dailySales[date].transactions += 1;
-            });
-            
-            // Update chart placeholder
-            document.getElementById('chartPlaceholder').innerHTML = `
-                <div style="text-align: center;">
-                    <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <p>Sales: ${state.businessSettings.currencySymbol} ${totalSales.toLocaleString()}</p>
-                    <p>Transactions: ${totalTransactions}</p>
-                    <p>Average: ${state.businessSettings.currencySymbol} ${avgTransaction.toFixed(2)}</p>
-                </div>
-            `;
-            
-            // Update report table
-            const reportData = document.getElementById('reportData');
-            reportData.innerHTML = '';
-            
-            Object.keys(dailySales).forEach(date => {
-                const dayData = dailySales[date];
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${new Date(date).toLocaleDateString()}</td>
-                    <td>${state.businessSettings.currencySymbol} ${dayData.sales.toLocaleString()}</td>
-                    <td>${dayData.transactions}</td>
-                    <td>${state.businessSettings.currencySymbol} ${(dayData.sales / dayData.transactions).toFixed(2)}</td>
-                    <td>N/A</td>
-                `;
-                reportData.appendChild(row);
-            });
-        }
-
-        function generateInventoryReport() {
-            document.getElementById('reportTitle').textContent = 'Inventory Report';
-            
-            const lowStockCount = state.products.filter(p => p.stock < state.businessSettings.lowStockThreshold).length;
-            const outOfStockCount = state.products.filter(p => p.stock === 0).length;
-            const totalValue = state.products.reduce((sum, p) => sum + (p.cost * p.stock), 0);
-            
-            document.getElementById('chartPlaceholder').innerHTML = `
-                <div style="text-align: center;">
-                    <i class="fas fa-warehouse" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <p>Total Products: ${state.products.length}</p>
-                    <p>Low Stock: ${lowStockCount}</p>
-                    <p>Out of Stock: ${outOfStockCount}</p>
-                    <p>Inventory Value: ${state.businessSettings.currencySymbol} ${totalValue.toLocaleString()}</p>
-                </div>
-            `;
-            
-            const reportData = document.getElementById('reportData');
-            reportData.innerHTML = '';
-            
-            state.products.forEach(product => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${product.name}</td>
-                    <td>${state.businessSettings.currencySymbol} ${product.price.toLocaleString()}</td>
-                    <td>${product.stock}</td>
-                    <td>${state.businessSettings.currencySymbol} ${(product.cost * product.stock).toLocaleString()}</td>
-                    <td>${product.stock < state.businessSettings.lowStockThreshold ? 'Low Stock' : 'Adequate'}</td>
-                `;
-                reportData.appendChild(row);
-            });
-        }
-
-        function generateCustomerReport() {
-            document.getElementById('reportTitle').textContent = 'Customer Report';
-            
-            const totalCustomers = state.customers.length;
-            const activeCustomers = state.customers.filter(c => {
-                const lastPurchase = new Date(c.lastPurchase);
-                const thirtyDaysAgo = new Date();
-                thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-                return lastPurchase >= thirtyDaysAgo;
-            }).length;
-            
-            const totalLoyaltyPoints = state.customers.reduce((sum, c) => sum + c.loyaltyPoints, 0);
-            const totalCustomerSpending = state.customers.reduce((sum, c) => sum + c.totalSpent, 0);
-            
-            document.getElementById('chartPlaceholder').innerHTML = `
-                <div style="text-align: center;">
-                    <i class="fas fa-users" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <p>Total Customers: ${totalCustomers}</p>
-                    <p>Active Customers: ${activeCustomers}</p>
-                    <p>Total Loyalty Points: ${totalLoyaltyPoints}</p>
-                    <p>Total Customer Spending: ${state.businessSettings.currencySymbol} ${totalCustomerSpending.toLocaleString()}</p>
-                </div>
-            `;
-            
-            const reportData = document.getElementById('reportData');
-            reportData.innerHTML = '';
-            
-            // Sort customers by total spent
-            const sortedCustomers = [...state.customers].sort((a, b) => b.totalSpent - a.totalSpent);
-            
-            sortedCustomers.forEach(customer => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${customer.name}</td>
-                    <td>${state.businessSettings.currencySymbol} ${customer.totalSpent.toLocaleString()}</td>
-                    <td>${customer.loyaltyPoints}</td>
-                    <td>${customer.lastPurchase ? new Date(customer.lastPurchase).toLocaleDateString() : 'Never'}</td>
-                    <td>${customer.phone || 'N/A'}</td>
-                `;
-                reportData.appendChild(row);
-            });
-        }
-
-        function generateShiftReports(startDate, endDate) {
-            document.getElementById('reportTitle').textContent = `Shift Reports (${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()})`;
-            
-            const filteredShifts = state.shifts.filter(shift => {
-                const shiftDate = new Date(shift.startTime);
-                return shiftDate >= startDate && shiftDate <= endDate;
-            });
-            
-            const totalShifts = filteredShifts.length;
-            const totalSales = filteredShifts.reduce((sum, shift) => sum + shift.sales, 0);
-            const totalTransactions = filteredShifts.reduce((sum, shift) => sum + shift.transactions, 0);
-            
-            document.getElementById('chartPlaceholder').innerHTML = `
-                <div style="text-align: center;">
-                    <i class="fas fa-clock" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <p>Total Shifts: ${totalShifts}</p>
-                    <p>Total Sales: ${state.businessSettings.currencySymbol} ${totalSales.toLocaleString()}</p>
-                    <p>Total Transactions: ${totalTransactions}</p>
-                    <p>Average per Shift: ${state.businessSettings.currencySymbol} ${(totalSales / totalShifts || 0).toFixed(2)}</p>
-                </div>
-            `;
-            
-            const reportData = document.getElementById('reportData');
-            reportData.innerHTML = '';
-            
-            filteredShifts.forEach(shift => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${new Date(shift.startTime).toLocaleString()}</td>
-                    <td>${state.businessSettings.currencySymbol} ${shift.sales.toLocaleString()}</td>
-                    <td>${shift.transactions}</td>
-                    <td>${state.businessSettings.currencySymbol} ${(shift.sales / shift.transactions || 0).toFixed(2)}</td>
-                    <td>${shift.cashier}</td>
-                `;
-                reportData.appendChild(row);
-            });
         }
 
         // Settings Functions
@@ -3810,7 +2504,6 @@
             state.businessSettings.taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
             state.businessSettings.currencySymbol = document.getElementById('currencySymbol').value || 'TSh';
             state.businessSettings.lowStockThreshold = parseInt(document.getElementById('lowStockThreshold').value) || 10;
-            state.businessSettings.loyaltyPointsRate = parseFloat(document.getElementById('loyaltyPointsRate').value) || 1;
 
             saveData('businessSettings', state.businessSettings);
             alert('Business settings saved successfully!');
@@ -3819,8 +2512,6 @@
         function saveStoreInfo() {
             state.storeInfo.name = document.getElementById('storeName').value || '7SQUARE POS';
             state.storeInfo.motto = document.getElementById('storeMotto').value || 'Modern Point of Sale System';
-            state.storeInfo.address = document.getElementById('storeAddress').value;
-            state.storeInfo.phone = document.getElementById('storePhone').value;
 
             document.getElementById('headerStoreName').textContent = state.storeInfo.name;
             document.getElementById('loginStoreName').textContent = state.storeInfo.name;
@@ -3842,189 +2533,6 @@
             if (confirm('This will delete all data including products, transactions, and customers. Are you sure?')) {
                 localStorage.clear();
                 location.reload();
-            }
-        }
-
-        function calculateDatabaseSize() {
-            let totalSize = 0;
-            for (let key in localStorage) {
-                if (localStorage.hasOwnProperty(key)) {
-                    totalSize += localStorage[key].length;
-                }
-            }
-            document.getElementById('dbSize').textContent = (totalSize / 1024).toFixed(2) + ' KB';
-        }
-
-        function loadBackupInfo() {
-            const backupFiles = JSON.parse(localStorage.getItem('backupFiles') || '[]');
-            const lastBackup = backupFiles.length > 0 ? 
-                new Date(backupFiles[backupFiles.length - 1].timestamp).toLocaleString() : 'Never';
-            
-            document.getElementById('lastBackup').textContent = lastBackup;
-            renderBackupFiles(backupFiles);
-        }
-
-        function renderBackupFiles(backupFiles) {
-            const backupFilesContainer = document.getElementById('backupFiles');
-            
-            if (backupFiles.length === 0) {
-                backupFilesContainer.innerHTML = `
-                    <i class="fas fa-database" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                    <p>No backup files found</p>
-                `;
-                return;
-            }
-            
-            backupFilesContainer.innerHTML = '';
-            
-            backupFiles.forEach((backup, index) => {
-                const backupItem = document.createElement('div');
-                backupItem.className = 'customer-card';
-                backupItem.innerHTML = `
-                    <div class="customer-header">
-                        <div class="customer-name">Backup ${new Date(backup.timestamp).toLocaleString()}</div>
-                        <div>${backup.size}</div>
-                    </div>
-                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                        <button class="btn btn-secondary btn-sm restore-backup-btn" data-index="${index}">
-                            <i class="fas fa-undo"></i> Restore
-                        </button>
-                        <button class="btn btn-danger btn-sm delete-backup-btn" data-index="${index}">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </div>
-                `;
-                
-                backupItem.querySelector('.restore-backup-btn').addEventListener('click', () => restoreBackupFile(index));
-                backupItem.querySelector('.delete-backup-btn').addEventListener('click', () => deleteBackupFile(index));
-                
-                backupFilesContainer.appendChild(backupItem);
-            });
-        }
-
-        function createBackup() {
-            const backupData = {
-                products: state.products,
-                transactions: state.transactions,
-                customers: state.customers,
-                shifts: state.shifts,
-                storeInfo: state.storeInfo,
-                businessSettings: state.businessSettings,
-                timestamp: new Date().toISOString()
-            };
-            
-            const backupString = JSON.stringify(backupData);
-            const backupSize = (backupString.length / 1024).toFixed(2) + ' KB';
-            
-            let backupFiles = JSON.parse(localStorage.getItem('backupFiles') || '[]');
-            backupFiles.push({
-                data: backupData,
-                timestamp: new Date().toISOString(),
-                size: backupSize
-            });
-            
-            // Keep only last 5 backups
-            if (backupFiles.length > 5) {
-                backupFiles = backupFiles.slice(-5);
-            }
-            
-            localStorage.setItem('backupFiles', JSON.stringify(backupFiles));
-            loadBackupInfo();
-            alert('Backup created successfully!');
-        }
-
-        function restoreBackup() {
-            const backupFiles = JSON.parse(localStorage.getItem('backupFiles') || '[]');
-            
-            if (backupFiles.length === 0) {
-                alert('No backup files available');
-                return;
-            }
-            
-            if (confirm('This will restore data from the latest backup. Current data will be replaced. Continue?')) {
-                const latestBackup = backupFiles[backupFiles.length - 1];
-                restoreBackupData(latestBackup.data);
-            }
-        }
-
-        function restoreBackupFile(index) {
-            const backupFiles = JSON.parse(localStorage.getItem('backupFiles') || '[]');
-            
-            if (index >= 0 && index < backupFiles.length) {
-                if (confirm('This will restore data from the selected backup. Current data will be replaced. Continue?')) {
-                    const backup = backupFiles[index];
-                    restoreBackupData(backup.data);
-                }
-            }
-        }
-
-        function restoreBackupData(backupData) {
-            state.products = backupData.products || [];
-            state.transactions = backupData.transactions || [];
-            state.customers = backupData.customers || [];
-            state.shifts = backupData.shifts || [];
-            state.storeInfo = backupData.storeInfo || {};
-            state.businessSettings = backupData.businessSettings || {};
-            
-            saveData('products', state.products);
-            saveData('transactions', state.transactions);
-            saveData('customers', state.customers);
-            saveData('shifts', state.shifts);
-            saveData('storeInfo', state.storeInfo);
-            saveData('businessSettings', state.businessSettings);
-            
-            alert('Backup restored successfully!');
-            location.reload();
-        }
-
-        function deleteBackupFile(index) {
-            const backupFiles = JSON.parse(localStorage.getItem('backupFiles') || '[]');
-            
-            if (index >= 0 && index < backupFiles.length) {
-                if (confirm('Are you sure you want to delete this backup?')) {
-                    backupFiles.splice(index, 1);
-                    localStorage.setItem('backupFiles', JSON.stringify(backupFiles));
-                    loadBackupInfo();
-                }
-            }
-        }
-
-        // Barcode Scanner
-        function toggleBarcodeScanner() {
-            if (state.scannerActive) {
-                stopBarcodeScanner();
-            } else {
-                startBarcodeScanner();
-            }
-        }
-
-        function startBarcodeScanner() {
-            // In a real implementation, this would use a barcode scanning library
-            // For this demo, we'll simulate barcode scanning
-            alert('Barcode scanner would be activated here. For demo purposes, enter barcode manually.');
-            document.getElementById('barcodeModal').classList.add('hidden');
-            showManualBarcodeEntry();
-        }
-
-        function stopBarcodeScanner() {
-            state.scannerActive = false;
-            document.getElementById('toggleScanner').innerHTML = '<i class="fas fa-camera"></i> Start Scanner';
-        }
-
-        function hideBarcodeModal() {
-            document.getElementById('barcodeModal').classList.add('hidden');
-            stopBarcodeScanner();
-        }
-
-        function showManualBarcodeEntry() {
-            const barcode = prompt('Enter barcode:');
-            if (barcode) {
-                const product = state.products.find(p => p.barcode === barcode);
-                if (product) {
-                    addToCart(product);
-                } else {
-                    alert('Product not found with that barcode');
-                }
             }
         }
     </script>
